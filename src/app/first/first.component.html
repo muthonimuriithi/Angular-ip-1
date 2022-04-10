@@ -9,8 +9,13 @@
 
         <div class="col-md-6">
             <h2>MY QUOTES</h2>
+
+            <ul *ngFor="let quotes of quotes">
+                <li> {{ quotes.quote }}</li>
+            </ul>
         </div>
         
     </div>
     
 </div>
+
