@@ -11,11 +11,12 @@
             <h2>MY QUOTES</h2>
 
             <ul *ngFor="let quotes of quotes">
-                <li> {{ quotes.quote }}</li>
+                <li> {{ quotes.quote }} <span class="text-primary"> Upvotes: {{quotes.upvotes}}</span> <span class="text-warning ml-3">Downvotes: {{quotes.downvotes}}</span></li>
             </ul>
         </div>
         
     </div>
     
 </div>
+
 
