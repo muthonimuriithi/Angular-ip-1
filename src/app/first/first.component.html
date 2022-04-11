@@ -1,17 +1,17 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <h1>"Why call it rush hour when nothing moves!" my favourite quote. Lets hear yours!</h1>
+        <h1 class="text-align-center">"Why call it rush hour when nothing moves!" my favourite quote. Lets hear yours!</h1>
 
-        <div class="col-md-6">
+        <div class="col-md-4">
             
             <app-forms></app-forms>
          </div>
 
-        <div class="col-md-6">
-            <h2>MY QUOTES</h2>
+        <div class="col-md-8">
+            <!-- <h2>MY QUOTES</h2> -->
 
             <ul *ngFor="let quotes of quotes">
-                <li> {{ quotes.quote }} <span class="text-primary"> Upvotes: {{quotes.upvotes}}</span> <span class="text-warning ml-3">Downvotes: {{quotes.downvotes}}</span></li>
+                <li> {{ quotes.quote }} <button class="text-primary"> Upvotes: {{quotes.upvotes}}</button> <button class="text-warning">Downvotes: {{quotes.downvotes}}</button></li>
             </ul>
         </div>
         
