@@ -21,6 +21,8 @@ export class Quotes {
             public dateCreated: Date,
             public createdBy: string) {
                 this.isDescriptionShown = false;
+
+                DataView
     
   }
 }

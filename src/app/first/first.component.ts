@@ -21,7 +21,7 @@ export class FirstComponent implements OnInit {
 
   uploadQuote(quote:any) {
     this.quotes.push(quote);
-    console.log(quote)
+    console.log(quote.quoteText)
   }
 
   ngOnInit(): void {

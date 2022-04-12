@@ -3,10 +3,10 @@
        
 <h3>Write your Quote here</h3>
 
-<form #quoteForm="ngForm" (ngSubmit)="addQuote()">
+<form #quoteForm="ngForm" (ngSubmit)="addQuote(quoteForm.value)" id="quoteForm">
     <div class="form-group">
     <label for="author">Author of quote</label> <br>
-    <input type="text" class="form-control" id="author" name="author" placeholder="Enter the author name" #author="ngModel" required [(ngModel)]="quoteToAdd.authorName"> 
+    <input type="text" class="form-control" id="author" name="authorName" placeholder="Enter the author name" #author="ngModel" required [(ngModel)]="quoteToAdd.authorName"> 
 </div>
     
         
@@ -14,18 +14,18 @@
     <br>
     <div class="form-group">
         <label for="quote">Quote</label> <br>
-         <textarea cols="4" type="text" class="form-control" id="quote" name="quote" placeholder="Enter the quote" [(ngModel)]="quoteToAdd.quoteText"></textarea>
+         <textarea cols="4" type="text" class="form-control" id="quote" name="quoteText" placeholder="Enter the quote"  #quoteText="ngModel" ngModel ></textarea>
     </div>
     <br>
     <br>
     <div class="form-group">
 
     <label for="name">Your name</label> <br>
-    <input type="text" class="form-control" id="your-name" name="your-name" placeholder="Enter your name"  [(ngModel)]="quoteToAdd.createdBy" >
+    <input type="text" class="form-control" id="your-name" name="createdBy" placeholder="Enter your name"  [(ngModel)]="quoteToAdd.createdBy" >
     </div>
 
     <!-- Testing to see if we get any data -->
-    Display {{quoteToAdd.createdBy}}
+    <!-- Display {{quoteToAdd.createdBy}} -->
     <br>
     <br>
 
