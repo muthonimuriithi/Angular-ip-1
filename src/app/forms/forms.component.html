@@ -1,22 +1,31 @@
 <div class="container">
     <div class="row mt-5">
        
-<h3 class="md-4">Write your Quote here</h3>
-<form action="">
-    <label for="author">Author of quote</label> <br>
-    <input type="text" class="form-control" id="author" name="author" placeholder="Enter the author name">
-        <!-- <input type="text" name="author" id="author" placeholder="Enter name of author">  -->
-    <br>
-    <br>
+<h3>Write your Quote here</h3>
 
-    <label for="quote">Quote</label> <br>
-    <!-- <input type="text" name="quote" id="quote" placeholder="Enter the quote">  -->
-    <textarea cols="4" type="text" class="form-control" id="quote" name="quote" placeholder="Enter the quote"></textarea>
+<form #quoteForm="ngForm" (ngSubmit)="addQuote()">
+    <div class="form-group">
+    <label for="author">Author of quote</label> <br>
+    <input type="text" class="form-control" id="author" name="author" placeholder="Enter the author name" #author="ngModel" required [(ngModel)]="quoteToAdd.authorName"> 
+</div>
+    
+        
     <br>
     <br>
+    <div class="form-group">
+        <label for="quote">Quote</label> <br>
+         <textarea cols="4" type="text" class="form-control" id="quote" name="quote" placeholder="Enter the quote" [(ngModel)]="quoteToAdd.quoteText"></textarea>
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
 
     <label for="name">Your name</label> <br>
-    <input type="text" class="form-control" id="your-name" name="your-name" placeholder="Enter your name">
+    <input type="text" class="form-control" id="your-name" name="your-name" placeholder="Enter your name"  [(ngModel)]="quoteToAdd.createdBy" >
+    </div>
+
+    <!-- Testing to see if we get any data -->
+    Display {{quoteToAdd.createdBy}}
     <br>
     <br>
 

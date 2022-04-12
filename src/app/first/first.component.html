@@ -4,14 +4,14 @@
 
         <div class="col-md-4">
             
-            <app-forms></app-forms>
+            <app-forms (addQuote)="uploadQuote($event)"></app-forms>
          </div>
 
-        <div class="col-md-8">
+        <div class="col-md-4">
             <!-- <h2>MY QUOTES</h2> -->
 
             <ul *ngFor="let quotes of quotes">
-                <li> {{ quotes.quote }} <button class="text-primary"> Upvotes: {{quotes.upvotes}}</button> <button class="text-warning">Downvotes: {{quotes.downvotes}}</button></li>
+                <li> {{ quotes.quoteText }} <button class="text-primary"> Upvotes: {{quotes.upvotes}}</button> <button class="text-warning">Downvotes: {{quotes.downvotes}}</button></li>
             </ul>
         </div>
         
