@@ -1,6 +1,28 @@
 # QuotesApp
 
+## BY LOISE MUTHONI
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+
+## Table of Content
+
++ [Description](#description)
++ [Installation Requirement](#Installation)
++ [Technology Used](#technology-used)
++ [Reference](#reference)
++ [Licence](#licence)
++ [Authors Info](#author-Info)
+
+
+
+## Installation
+
+
+### Requirements
+
+* Either a computer,phone,tablet or an Ipad
+
+* An access to the Internet.
 
 ## Development server
 
@@ -73,3 +95,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Authors Info
+For any inquires please email me at
+
+Email : loissmuthoni@student.moringaschool.com
