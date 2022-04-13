@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -18,13 +18,56 @@ export class FirstComponent implements OnInit {
 
 
   constructor() { }
+  // num1: number;
+  // num2: number;
+  // count: number;
+
 
   uploadQuote(quote:any) {
     this.quotes.push(quote);
     console.log(quote.quoteText)
   }
 
-  ngOnInit(): void {
+  toggleDescription(index:any) {
+    this.quotes[index].isDescriptionShown = !this.quotes[index].isDescriptionShown;
   }
+  //Delete quote function
+  
+  deleteQuote(index:any) {
+    confirm('Do you want to delete this quote ?') ? this.quotes.splice(index, 1) : console.log('Not deleted');
+
+  }
+  highlightThis(highest:any) {
+    console.log(1);
+  }
+
+  addDownVote(index:any) {
+    this.quotes[index].downvotes++;
+  }
+  addUpVote(index:any) {
+    this.quotes[index].upvotes++;
+    // this.checkHighVote();
+  }
+
+  checkHighVote() {
+    const votesArray: number[] = [];
+    for (const quote of this.quotes) {
+      votesArray.push(quote.upvotes);
+    }
+    votesArray.sort();
+    console.log(votesArray[votesArray.length - 1]);
+    if (votesArray.length - 1 === votesArray.length - 2) {
+
+      return votesArray[votesArray.length - 2];
+    }
+
+    return votesArray[votesArray.length - 1];
+  }
+
+  ngOnInit() {
+  }
+
+  // ngOnInit(): void {
+  // }
 
 }
